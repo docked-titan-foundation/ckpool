@@ -1,0 +1,55 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "baseBranches": ["beta"],
+  "labels": ["dependencies"],
+  "reviewers": ["albertoig"],
+  "assignees": ["albertoig"],
+  "prConcurrentLimit": 10,
+  "minimumReleaseAge": "3 days",
+  "schedule": ["after 9am and before 5pm on weekdays"],
+  "semanticCommits": "enabled",
+  "packageRules": [
+    {
+      "matchManagers": ["dockerfile"],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "dependencies",
+      "addLabels": ["docker"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "dependencies",
+      "addLabels": ["github-actions"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "dependencies",
+      "addLabels": ["npm"]
+    },
+    {
+      "description": "Upstream ckpool source bumps change the stratum server itself — including the code that assembles the coinbase of a solved block. Never auto-merged, and given a longer soak.",
+      "matchManagers": ["custom.regex"],
+      "matchDepNames": ["ckolivas/ckpool"],
+      "semanticCommitType": "feat",
+      "semanticCommitScope": "ckpool",
+      "addLabels": ["upstream", "review-required"],
+      "automerge": false,
+      "minimumReleaseAge": "7 days",
+      "commitBody": "Upstream ckpool source bump. Review the diff before merging: this code assembles the coinbase output of a solved block."
+    }
+  ],
+  "customManagers": [
+    {
+      "description": "Track the pinned upstream ckpool commit (upstream publishes no tags or releases).",
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG CKPOOL_COMMIT=(?<currentDigest>[a-f0-9]{40})"],
+      "depNameTemplate": "ckolivas/ckpool",
+      "packageNameTemplate": "https://bitbucket.org/ckolivas/ckpool",
+      "currentValueTemplate": "master",
+      "datasourceTemplate": "git-refs"
+    }
+  ]
+}
