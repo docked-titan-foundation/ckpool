@@ -1,3 +1,15 @@
+# 1.0.0 (2026-07-23)
+
+
+### Bug Fixes
+
+* **ci:** pipefail so a failed semantic-release fails the release job ([fdc0a0e](https://github.com/docked-titan-foundation/ckpool/commit/fdc0a0eeef18035b25c4ea551fd1265935b3abe1))
+
+
+### Features
+
+* **ckpool:** hardened container image for ckpool solo mining ([07a5b75](https://github.com/docked-titan-foundation/ckpool/commit/07a5b759f3c6250de870e16d49b0d78f0d198103))
+
 # 1.0.0-beta.1 (2026-07-23)
 
 
