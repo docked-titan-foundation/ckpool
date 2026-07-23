@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/ckpool-banner.svg" alt="ckpool — Your address, your block, by Alberto Iglesias" />
+</p>
+
 [![CI_CD](https://github.com/docked-titan-foundation/ckpool/actions/workflows/pipeline.yml/badge.svg)](https://github.com/docked-titan-foundation/ckpool/actions/workflows/pipeline.yml)
 ![Release](https://img.shields.io/github/v/release/docked-titan-foundation/ckpool)
 [![Signed + SBOM](https://img.shields.io/badge/release-cosign--signed%20%2B%20SBOM-6f42c1)](#-verifying-the-image)
