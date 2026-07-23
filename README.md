@@ -43,6 +43,7 @@ which upstream source is compiled in (upstream has no versions of its own).
 
 | Version | ckpool commit | Base | Date |
 |---|---|---|---|
+| 1.0.0-beta.1 (latest beta) | `37984cff4373` | bookworm-slim | 2026-07-23 |
 
 ## 🚀 Usage
 
