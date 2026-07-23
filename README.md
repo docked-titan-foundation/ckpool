@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/ckpool-banner.svg" alt="ckpool — Your address, your block, by Alberto Iglesias" />
+  <img src="docs/images/ckpool-banner.svg" alt="ckpool — Hardened anonymous solo mining for everyone, by Alberto Iglesias" />
 </p>
 
 [![CI_CD](https://github.com/docked-titan-foundation/ckpool/actions/workflows/pipeline.yml/badge.svg)](https://github.com/docked-titan-foundation/ckpool/actions/workflows/pipeline.yml)
