@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
-  "baseBranches": ["beta"],
+  "baseBranches": ["main"],
   "labels": ["dependencies"],
   "reviewers": ["albertoig"],
   "assignees": ["albertoig"],
