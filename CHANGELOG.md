@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/docked-titan-foundation/ckpool/compare/v1.0.0...v1.1.0) (2026-07-25)
+
+
+### Features
+
+* **ckpool:** update ckolivas/ckpool digest to 308410d ([1d3171a](https://github.com/docked-titan-foundation/ckpool/commit/1d3171a87132267a908964cccdc8b12bc78db30d))
+
 # 1.0.0 (2026-07-23)
 
 
