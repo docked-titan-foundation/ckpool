@@ -37,7 +37,7 @@
       "addLabels": ["upstream", "review-required"],
       "automerge": false,
       "minimumReleaseAge": "7 days",
-      "commitBody": "Upstream ckpool source bump. Review the diff before merging: this code assembles the coinbase output of a solved block."
+      "commitBody": "Upstream ckpool source bump. Review the diff before merging: this code\nassembles the coinbase output of a solved block."
     }
   ],
   "customManagers": [
