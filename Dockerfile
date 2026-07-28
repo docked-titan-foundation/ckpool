@@ -10,7 +10,7 @@ ARG DEBIAN_BASE=debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7
 FROM ${DEBIAN_BASE} AS build
 
 ARG CKPOOL_REPO=https://bitbucket.org/ckolivas/ckpool.git
-ARG CKPOOL_COMMIT=308410ddf321349704f252f36b82d77f2ae007fc
+ARG CKPOOL_COMMIT=2e44101e2da2c11f499be76d16e6a26cd95cfea7
 
 # ckpool is C built with autotools. yasm compiles the x86-64 SHA-NI assembly
 # path; libzmq is what lets the pool react to a new block the instant it lands
@@ -59,7 +59,7 @@ FROM ${DEBIAN_BASE} AS runtime
 ARG APP_VERSION
 ARG BUILD_DATE
 ARG VCS_REF
-ARG CKPOOL_COMMIT=308410ddf321349704f252f36b82d77f2ae007fc
+ARG CKPOOL_COMMIT=2e44101e2da2c11f499be76d16e6a26cd95cfea7
 
 # upstream.revision records which ckpool commit is baked in — the image tag
 # tracks *this* repo's releases, not upstream's (upstream has none).
