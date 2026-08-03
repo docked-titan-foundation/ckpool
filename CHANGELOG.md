@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/docked-titan-foundation/ckpool/compare/v1.1.0...v1.2.0) (2026-08-03)
+
+
+### Features
+
+* **ckpool:** update ckolivas/ckpool digest to 2e44101 ([cd13d06](https://github.com/docked-titan-foundation/ckpool/commit/cd13d0627a1ffbd22aa01d9c941a6d3fa066b58e))
+* **ckpool:** update ckolivas/ckpool digest to 2e44101 ([#10](https://github.com/docked-titan-foundation/ckpool/issues/10)) ([31e5f4d](https://github.com/docked-titan-foundation/ckpool/commit/31e5f4dff8c6e946bd9d3cc6e45315ce11d87baf))
+
 # [1.1.0](https://github.com/docked-titan-foundation/ckpool/compare/v1.0.0...v1.1.0) (2026-07-25)
 
 

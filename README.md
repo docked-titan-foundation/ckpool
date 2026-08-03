@@ -248,7 +248,8 @@ which upstream source is compiled in (upstream has no versions of its own).
 
 | Version | ckpool commit | Base | Date |
 |---|---|---|---|
-| 1.1.0 (latest) | `308410ddf321` | bookworm-slim | 2026-07-25 |
+| 1.2.0 (latest) | `2e44101e2da2` | bookworm-slim | 2026-08-03 |
+| 1.1.0 | `308410ddf321` | bookworm-slim | 2026-07-25 |
 | 1.0.0 | `37984cff4373` | bookworm-slim | 2026-07-23 |
 
 ### Beta Releases
