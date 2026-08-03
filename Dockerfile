@@ -93,7 +93,8 @@ COPY --from=build /build/src/notifier /usr/local/bin/notifier
 
 # Non-root. Upstream's install scripts run ckpool as a dedicated user; we do the
 # same, with a fixed uid/gid so a Kubernetes securityContext and volume fsGroup
-# can be set to match.
+# can be set to match. USER is set numerically below: runAsNonRoot admission
+# checks read the uid off the image without resolving /etc/passwd.
 RUN groupadd -g 1000 ckpool && \
     useradd -u 1000 -g 1000 -s /usr/sbin/nologin -M ckpool && \
     mkdir -p /var/lib/ckpool /tmp/ckpool && \
@@ -103,12 +104,12 @@ RUN groupadd -g 1000 ckpool && \
 # is exposed.
 EXPOSE 3333
 
-USER ckpool
+USER 1000:1000
 
 # ckpool has no HTTP surface at all — the stratum port binding is the only signal
 # it is alive and serving. bash's /dev/tcp opens a real TCP connection to it.
 HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
-    CMD bash -c 'exec 3<>/dev/tcp/127.0.0.1/3333' || exit 1
+    CMD ["bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/3333 || exit 1"]
 
 # Solo mining (-B): each miner authenticates with the Bitcoin address it wants a
 # found block to pay, set as its stratum username. The sockdir must be writable;
