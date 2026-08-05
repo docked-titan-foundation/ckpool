@@ -5,7 +5,7 @@
 # only. We build from source at a pinned commit. The commit SHA is the integrity
 # check: git is content-addressed, so checking out a full SHA cannot silently
 # give us different code the way a mutable branch or a re-generated tarball can.
-ARG DEBIAN_BASE=debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
+ARG DEBIAN_BASE=debian:bookworm-slim@sha256:abd67ffcfa541b485a3dff59865ab629aa048a6c613e639d36e7456b0b229241
 # hadolint ignore=DL3006
 FROM ${DEBIAN_BASE} AS build
 
