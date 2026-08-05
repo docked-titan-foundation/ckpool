@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/docked-titan-foundation/ckpool/compare/v1.2.0...v1.3.0) (2026-08-05)
+
+
+### Bug Fixes
+
+* **dependencies:** update debian:bookworm-slim docker digest to abd67ff ([584adfa](https://github.com/docked-titan-foundation/ckpool/commit/584adfa6913a1d91b36ec91ec0766590e7d2755e))
+* **docker:** satisfy hadolint 2.15.0 DL3066 and DL3025 ([53406eb](https://github.com/docked-titan-foundation/ckpool/commit/53406eb9baf88296e77fe27730c146bcb80f4217))
+
+
+### Features
+
+* **ckpool:** update ckolivas/ckpool digest to 133709f ([8c715a3](https://github.com/docked-titan-foundation/ckpool/commit/8c715a39d1b524fafaaaf7708867cd552c904af5))
+
 # [1.2.0](https://github.com/docked-titan-foundation/ckpool/compare/v1.1.0...v1.2.0) (2026-08-03)
 
 
